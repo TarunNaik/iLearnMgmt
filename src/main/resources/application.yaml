@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ILearnApp
+#  thymeleaf:
+#    check-template: true
+#    check-template-location: true
+#    cache: false
+#    enabled: true
+#    encoding: UTF-8
+#    mode: HTML
+#    prefix: classpath:/templates/
+#    suffix: .html
+
+server:
+  port: 9090
