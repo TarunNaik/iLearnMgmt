@@ -1,6 +1,17 @@
 spring:
   application:
     name: ILearnApp
+  datasource:
+    url: jdbc:postgresql://localhost:5051/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
 #  thymeleaf:
 #    check-template: true
 #    check-template-location: true
@@ -13,3 +24,4 @@ spring:
 
 server:
   port: 9090
+

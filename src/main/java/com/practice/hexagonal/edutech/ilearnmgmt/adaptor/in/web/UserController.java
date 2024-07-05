@@ -1,13 +1,12 @@
-package com.practice.hexagonal.edutech.ilearnmgmt.controller;
+package com.practice.hexagonal.edutech.ilearnmgmt.adaptor.in.web;
 
-import com.practice.hexagonal.edutech.ilearnmgmt.dto.UserDTO;
+import com.practice.hexagonal.edutech.ilearnmgmt.application.dto.UserDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
-
     @GetMapping("/index")
     public String root() {
         return "index";
@@ -30,8 +29,5 @@ public class UserController {
         return "user/index";
     }
 
-//    @GetMapping(value = "/{userName}")
-//    public String hello(@PathVariable String userName) {
-//        return "Hello " + userName;
-//    }
+
 }

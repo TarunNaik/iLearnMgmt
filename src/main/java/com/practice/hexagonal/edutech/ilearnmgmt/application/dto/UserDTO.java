@@ -1,4 +1,4 @@
-package com.practice.hexagonal.edutech.ilearnmgmt.dto;
+package com.practice.hexagonal.edutech.ilearnmgmt.application.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
