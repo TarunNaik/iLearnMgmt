@@ -17,8 +17,9 @@ public class UserDaoImpl implements UserDao {
         this.userEntityMapper = userEntityMapper;
     }
     @Override
-    public Optional<User> findUserByEmailId(String emailId) {
-        return Optional.empty();
+    public User findUserByEmailId(String emailId) {
+        com.practice.hexagonal.edutech.ilearnmgmt.adaptor.out.persistence.jpa.entity.User user = userRepository.findByEmail(emailId);
+        return userEntityMapper.domainFromEntity(user);
     }
 
     @Override

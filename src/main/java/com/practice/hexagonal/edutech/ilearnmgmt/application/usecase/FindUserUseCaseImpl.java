@@ -19,7 +19,7 @@ public class FindUserUseCaseImpl implements FindUserUseCase {
     }
     @Override
     public UserDTO findUserByEmail(String email) {
-        Optional<User> user = userDao.findUserByEmailId(email);
-        return user.isPresent() ? mapper.UserDtoFromUser(user.get()) : null;
+        User user = userDao.findUserByEmailId(email);
+        return mapper.UserDtoFromUser(user);
     }
 }

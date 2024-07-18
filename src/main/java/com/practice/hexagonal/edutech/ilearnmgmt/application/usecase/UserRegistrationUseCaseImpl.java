@@ -30,8 +30,8 @@ public class UserRegistrationUseCaseImpl implements UserRegistrationUseCase {
 
     public String registerUser(UserDTO userDTO) throws UserAlreadyRegisteredException {
         //check if User is already registered, email id is unique
-        Optional<User> user = userDao.findUserByEmailId(userDTO.getEmail());
-        if(user.isPresent()) {
+        User user = userDao.findUserByEmailId(userDTO.getEmail());
+        if(user != null && user.getEmail() != null) {
             throw new UserAlreadyRegisteredException("User already registered");
         }
         return userDao.registerUser(mapper.userDtoToUser(userDTO));

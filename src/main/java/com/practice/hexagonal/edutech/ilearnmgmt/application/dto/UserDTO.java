@@ -4,14 +4,16 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
+import java.util.UUID;
+
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Builder
+@Data
+@ToString
 public class UserDTO {
 
-    private Long id;
+    private UUID id;
     @NotEmpty
     private String firstName;
     @NotEmpty

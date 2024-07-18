@@ -46,10 +46,10 @@ public class UserController {
         }
         if(result.hasErrors()){
             model.addAttribute("user", userDTO);
-            return "user/register";
+            return "redirect:/register?failure";
         }
         userRegistrationUseCase.registerUser(userDTO);
-        return "redirect:register?success";
+        return "redirect:/register?success";
     }
 
     @GetMapping("/user")

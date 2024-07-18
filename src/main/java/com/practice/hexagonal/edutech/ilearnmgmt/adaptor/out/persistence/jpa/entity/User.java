@@ -1,12 +1,13 @@
 package com.practice.hexagonal.edutech.ilearnmgmt.adaptor.out.persistence.jpa.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
-
+@Builder
+@ToString
+@Data
 @Entity
 @Table(name = "User_Detail")
 @AllArgsConstructor

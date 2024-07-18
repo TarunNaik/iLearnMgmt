@@ -35,7 +35,12 @@
             </div>
             <div th:if="${param.success}">
                 <div class="alert alert-info">
-                    You have successfully registered our app!
+                    You have successfully registered in our app!
+                </div>
+            </div>
+            <div th:if="${param.failure}">
+                <div class="alert alert-info" style="background:palevioletred">
+                    You have already registered in our app!, try login in.
                 </div>
             </div>
             <div class="card-body">
